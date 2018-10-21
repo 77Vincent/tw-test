@@ -3,10 +3,10 @@
   font-family: sans-serif;
 
   .container {
-    margin-top: -45px;
-    margin-bottom: -30px;
-    min-height: 100vh;
-    margin: 0 auto;
+    height: 100vh;
+    margin: -60px auto -30px;
+    padding-top: 60px;
+    padding-bottom: 30px;
     max-width: 1200px;
   }
 }
