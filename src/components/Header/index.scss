@@ -1,0 +1,9 @@
+@import '../../base/var.scss';
+
+.App-header {
+  box-shadow: 0 0 7px 0 $color-gray;
+
+  .App-header-logo {
+    width: 100px;
+  }
+}
