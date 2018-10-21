@@ -21,6 +21,8 @@ export default {
       title: 'idle',
       count: 5,
     },
+  },
+  types: {
     all: {
       title: 'all',
       count: 8,
@@ -32,6 +34,7 @@ export default {
     virtual: {
       title: 'virtual',
       count: 3,
-    }
-  }
+    },
+  },
+  currentSearchType: 'all',
 } 

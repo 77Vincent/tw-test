@@ -15,7 +15,7 @@ export default ({ app }) => {
   return (
     <div className="App-status row">
       {
-        ['building', 'idle'].map(item => (
+        Object.keys(model.status).map(item => (
           <div className="column-4">
             <Info
               className={`App-status-item App-status-${item}`}
@@ -26,8 +26,8 @@ export default ({ app }) => {
       <div className="column-4">
         <div className="App-status-item App-status-overall">
           {
-            ['all', 'physical', 'virtual'].map(item => (
-              <Info className="App-status-overall-item" item={model.status[item]} />
+            Object.keys(model.types).map(item => (
+              <Info className="App-status-overall-item" item={model.types[item]} />
             ))
           }
         </div>

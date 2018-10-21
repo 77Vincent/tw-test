@@ -1,0 +1,25 @@
+@import '../../base/var.scss';
+
+$heigth-search: 50px;
+
+.App-search {
+  margin-top: 20px;
+  height: $heigth-search;
+  background-color: #fff;
+
+  .App-search-type {
+    cursor: pointer;
+    text-align: center;
+    height: $heigth-search;
+    display: inline-block;
+    width: 100px;
+    text-transform: capitalize;
+    line-height: $heigth-search;
+    border-right: 1px solid $color-off-white;
+
+    &.active {
+      color: $color-cyan;
+      border-bottom: 3px solid $color-cyan;
+    }
+  }
+}
