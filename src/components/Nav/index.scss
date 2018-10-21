@@ -1,0 +1,21 @@
+@import '../../base/var.scss';
+
+.App-nav {
+  background-color: $color-blue-dark;
+  height: 100%;
+  width: 300px;
+
+  .App-nav-item {
+    color: $color-off-white;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 30px;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-blue;
+      color: $color-cyan;
+    }
+  }
+}
