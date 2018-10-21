@@ -19,7 +19,15 @@ $color-green: #7fbc39;
 $font-family: 'Avenir', 'Helvetica', 'Arial', 'sans-serif';
 
 // Mixin
+@mixin clearfix {
+  &::after {
+    display: block;
+    clear: both;
+    content: "";
+  }
+}
 $box-shadow: 0 0 6px 0 $color-gray;
 
 // Dimension
 $width-nav: 270px;
+

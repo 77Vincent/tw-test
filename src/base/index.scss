@@ -22,4 +22,12 @@
     padding-top: 15px;
     padding-left: $width-nav + 30px;
   }
+
+  .row {
+    @include clearfix;
+  }
+
+  .column-4 {
+    width: 33.33%;
+  }
 }

@@ -1,6 +1,6 @@
 import Veact from '../lib/js/veact'
 
-import { Header, Footer, Nav } from '../components/'
+import { Header, Footer, Nav, Status } from '../components/'
 
 import './index.scss'
 import '../lib/css/reset.css'
@@ -14,6 +14,7 @@ const App = app => {
         <Nav />
 
         <div className="App-content">
+          <Status />
         </div>
       </div>
 

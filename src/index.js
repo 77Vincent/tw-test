@@ -15,7 +15,17 @@ const model = {
     'bjstdmngbgr02/Acceptance_test',
     'bjstdmngbgr02/Acceptance_test',
     'bjstdmngbgr02/Acceptance_test',
-  ]
+  ],
+  status: {
+    building: {
+      title: 'building',
+      count: 3,
+    },
+    idle: {
+      title: 'idle',
+      count: 5,
+    },
+  }
 } 
 
 Veact.createApp(document.getElementById('root'), model).mount(App)
