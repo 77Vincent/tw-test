@@ -3,7 +3,8 @@
 .App-status {
 
   .App-status-item {
-
+    height: 120px;
+    padding: 20px 30px;
   }
 
   .App-status-building {
@@ -12,5 +13,9 @@
 
   .App-status-idle {
     background-color: $color-green;
+  }
+
+  .App-status-overall {
+    background-color: #fff;
   }
 }
