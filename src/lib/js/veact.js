@@ -116,10 +116,11 @@ class Veact {
       return document.createTextNode('')
     }
 
-    const { className, onClick, style } = vDOM.props
+    const { className, onClick, style, src } = vDOM.props
     const $el = document.createElement(vDOM.type)
 
     // Apply valid DOM properties to DOM
+    if (src) { $el.src = src }
     if (className) { $el.className = className }
     if (onClick) { $el.onclick = onClick }
     if (style) {

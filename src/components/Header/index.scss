@@ -1,10 +1,13 @@
 @import '../../base/var.scss';
 
 .App-header {
-  height: 45px;
+  height: 60px;
   box-shadow: $box-shadow;
+  text-align: center;
+  line-height: 60px;
 
   .App-header-logo {
-    width: 100px;
+    width: 90px;
+    vertical-align: middle;
   }
 }
