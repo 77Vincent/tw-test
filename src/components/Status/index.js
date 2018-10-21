@@ -27,8 +27,7 @@ export default ({ app }) => {
         <div className="App-status-item App-status-overall">
           {
             ['all', 'physical', 'virtual'].map(item => (
-              <Info
-                item={model.status[item]} />
+              <Info className="App-status-overall-item" item={model.status[item]} />
             ))
           }
         </div>

@@ -7,6 +7,21 @@
     padding: 20px 30px;
   }
 
+  .App-status-building,
+  .App-status-idle {
+    color: #fff;
+
+    .App-status-item-title {
+      font-weight: 700;
+      text-transform: capitalize;
+      font-size: 18px;
+    }
+    .App-status-item-count {
+      font-size: 48px;
+      float: right;
+    }
+  }
+
   .App-status-building {
     background-color: $color-yellow;
   }
@@ -16,6 +31,33 @@
   }
 
   .App-status-overall {
+    text-transform: uppercase;
     background-color: #fff;
+
+    .App-status-overall-item {
+      width: 33%;
+      float: left;
+      height: 100%;
+      position: relative;
+
+      .App-status-item-title {
+        font-size: 12px;
+      }
+      .App-status-item-count {
+        font-size: 20px;
+        font-weight: bold;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+      }
+
+      &:nth-child(2) {
+        text-align: center;
+      }
+
+      &:last-child {
+        text-align: right;
+      }
+    }
   }
 }
