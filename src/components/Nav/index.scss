@@ -28,11 +28,22 @@
     position: absolute;
     width: 100%;
     bottom: 0;
+    list-style-position: inside;
 
     .App-nav-history-title {
       font-size: 24px;
       color: $color-off-white-2;
       margin-bottom: 15px;
+    }
+
+    .App-nav-history-item {
+      color: $color-gray;
+      line-height: 2;
+      cursor: pointer;
+
+      &:hover {
+        color: $color-cyan;
+      }
     }
   }
 }
