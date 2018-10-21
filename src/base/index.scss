@@ -12,5 +12,14 @@
     padding-top: 60px;
     padding-bottom: 30px;
     max-width: 1200px;
+    position: relative;
+  }
+
+  .App-content {
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    padding-top: 15px;
+    padding-left: $width-nav + 30px;
   }
 }

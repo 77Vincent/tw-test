@@ -12,6 +12,9 @@ const App = app => {
 
       <div className="container">
         <Nav />
+
+        <div className="App-content">
+        </div>
       </div>
 
       <Footer />

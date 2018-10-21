@@ -3,10 +3,11 @@
 .App-nav {
   background-color: $color-blue-dark;
   height: 100%;
-  width: 270px;
+  width: $width-nav;
   height: 100%;
   padding-top: 30px;
   position: relative;
+  z-index: 1;
 
   .App-nav-item {
     color: $color-off-white;
