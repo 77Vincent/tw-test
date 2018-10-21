@@ -1,0 +1,12 @@
+@import '../../base/var.scss';
+
+.App-footer {
+  box-shadow: $box-shadow;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px 0;
+  font-size: 12px;
+}
