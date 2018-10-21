@@ -1,6 +1,10 @@
+@import './var.scss';
+
 .App-root {
   position: relative;
-  font-family: sans-serif;
+  font-family: $font-family;
+  background-color: $color-white;
+  font-size: 14px;
 
   .container {
     height: 100vh;

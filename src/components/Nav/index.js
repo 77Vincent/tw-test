@@ -3,27 +3,21 @@ import Veact from '../../lib/js/veact'
 import './index.scss'
 import logo from '../../assets/images/logo.png'
 
-const Nav = () => {
-  const items = [
-    'dashboard',
-    'agent',
-    'my cruise',
-    'help',
-  ]
-  const NavItem = ({ content }) => {
-    console.log(content)
-    return (
-      <div className="App-nav-item">{content}</div>
-    )
-  }
+const Nav = ({ app }) => {
+  const { model } = app
 
   return (
     <div className="App-nav">
       {
-        items.map(item => {
-          return <NavItem content={item} />
-        }) 
+        model.navigationItems.map(item => <div className="App-nav-item">{item}</div>) 
       }
+
+      <div className="App-nav-history">
+        <div className="App-nav-history-title">History</div>
+        {
+          model.histories.map(item => <div>{item}</div>)
+        }
+      </div>
     </div>
   )
 }

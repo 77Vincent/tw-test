@@ -3,8 +3,10 @@
 .App-nav {
   background-color: $color-blue-dark;
   height: 100%;
-  width: 300px;
+  width: 270px;
   height: 100%;
+  padding-top: 30px;
+  position: relative;
 
   .App-nav-item {
     color: $color-off-white;
@@ -17,6 +19,20 @@
     &:hover {
       background-color: $color-blue;
       color: $color-cyan;
+    }
+  }
+
+  .App-nav-history {
+    padding: 0 15px 20px;
+    color: $color-gray;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+
+    .App-nav-history-title {
+      font-size: 24px;
+      color: $color-off-white-2;
+      margin-bottom: 15px;
     }
   }
 }

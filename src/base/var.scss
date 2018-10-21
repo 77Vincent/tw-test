@@ -1,6 +1,7 @@
 // Color
 $color-white: #f3f3f3;
 $color-off-white: #e1e4e6;
+$color-off-white-2: #ccc;
 
 $color-gray: #999;
 $color-gray-dark: #777;
@@ -10,6 +11,12 @@ $color-blue: #435466;
 
 $color-cyan-dark: #01869a;
 $color-cyan: #00b4cf;
+
+$color-yellow: #ff9a2a;
+$color-green: #7fbc39;
+
+// Font family
+$font-family: 'Avenir', 'Helvetica', 'Arial', 'sans-serif';
 
 // Mixin
 $box-shadow: 0 0 6px 0 $color-gray;
