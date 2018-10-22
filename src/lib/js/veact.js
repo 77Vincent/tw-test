@@ -126,7 +126,7 @@ class Veact {
       }
     }
 
-    const plainProperties = ['src', 'className']
+    const plainProperties = ['src', 'className', 'autofocus']
     for (let key of plainProperties) {
       $el[key] = vDOM.props[key]
     }

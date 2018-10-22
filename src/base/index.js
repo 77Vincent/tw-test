@@ -1,11 +1,11 @@
 import Veact from '../lib/js/veact'
 
-import { Header, Footer, Nav, Status, SearchBar } from '../components/'
+import { Header, Footer, Nav, Status, SearchBar, Session } from '../components/'
 
 import './index.scss'
 import '../lib/css/reset.css'
 
-const App = () => {
+const App = ({ app }) => {
   return (
     <div className="App-root" >
       <Header />
@@ -16,6 +16,11 @@ const App = () => {
         <div className="App-content">
           <Status />
           <SearchBar />
+          {
+            app.model.sessions.map(session => (
+              <Session session={session}/>
+            ))
+          }
         </div>
       </div>
 

@@ -3,15 +3,18 @@ import Veact from '../../lib/js/veact'
 import Icon from '../Icon'
 import './index.scss'
 
-export default ({ prefix }) => {
-  let isFocus = false
+const toggleFocus = (app, boolean) => () => {
+  app.dispatch(() => ({ searchIsFocus: boolean }))
+}
+
+export default ({ prefix, app }) => {
+  const { searchIsFocus } = app.model
 
   return (
     <div className="App-input">
-      <Icon type={prefix} opacity={0.3} style={{ display: isFocus ? 'none' : 'block' }} />
+      <Icon type={prefix} opacity={0.3} style={{ visibility: searchIsFocus ? 'hidden' : 'visible' }} />
       <input
-        onFocus={() => { isFocus = true }}
-        onBlur={() => { isFocus = false }}
+        onFocus={toggleFocus(app, true)}
       />
     </div>
   )

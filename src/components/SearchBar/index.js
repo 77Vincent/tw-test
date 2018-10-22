@@ -4,10 +4,7 @@ import Input from '../Input'
 import './index.scss'
 
 const switchSearchType = (app, key) => () => {
-  app.dispatch(model => ({
-    ...model,
-    currentSearchType: key,
-  }))
+  app.dispatch(() => ({ currentSearchType: key }))
 }
 
 export default ({ app }) => {

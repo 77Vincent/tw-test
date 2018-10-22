@@ -1,4 +1,5 @@
 export default {
+  searchIsFocus: false,
   navigationItems: [
     'dashboard',
     'agent',
@@ -37,4 +38,30 @@ export default {
     },
   },
   currentSearchType: 'all',
+  sessions: [{
+    status: 'building',
+    ip: '192.168.0.102',
+    type: 'windows',
+    url: 'bjstwojfd.thoughtworks.com',
+  }, {
+    status: 'idle',
+    ip: '192.168.0.102',
+    type: 'windows',
+    url: 'bjstwojfd.thoughtworks.com',
+  }, {
+    status: 'idle',
+    ip: '192.168.1.92',
+    type: 'ubuntu',
+    url: 'bjstwojfd.thoughtworks.com',
+  }, {
+    status: 'building',
+    ip: '192.168.1.92',
+    type: 'redhat',
+    url: 'bjstwojfd.thoughtworks.com',
+  }, {
+    status: 'idle',
+    ip: '192.168.1.92',
+    type: 'debian',
+    url: 'bjstwojfd.thoughtworks.com',
+  }],
 } 
