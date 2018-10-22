@@ -4,15 +4,26 @@ Pure functional, simplified React-like Javascript library with built-in state ma
 ## Table of content
 []()
 
-## Quick Start 
+## Quick Start
 ```js
-import Veact from 'Veact'
+// App.js
 
-const model = {
+export default app => <div>{app.model.title}</div>
+```
+- model.js
+```js
+// model.js
+
+export default {
   title: 'Hello World'
 }
+```
+```js
+// index.js
+import Veact from 'Veact'
 
-const App = app => <div>{app.model.title}</div>
+import model from './model'
+import App from './App'
 
 Veact.createApp(document.getElementById('root'), model).mount(App)
 ```
