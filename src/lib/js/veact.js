@@ -26,17 +26,26 @@ const errorMessages = {
 }
 
 class Veact {
-  constructor(rootDOM, vDOM, model) {
+  constructor(rootDOM, model, App) {
     this.rootDOM = rootDOM
-    this.vDOM = vDOM
     this.model = model
-    this.App = null
+    this.App = App 
+
+    this.vDOM = {} 
     this.components = new Set([]) 
   }
 
-  static createApp(rootDOM, model) {
-    const app = new Veact(rootDOM, {}, model)
+  static createApp(rootDOM, model, App) {
+    if (!_.isFunction(App)) {
+      throw new Error(errorMessages.APP_IN_MOUNT_NOT_FUNCTION)
+    }
+
+    const app = new Veact(rootDOM, model, App)
     this.app = app
+
+    app.vDOM = App(app)
+    app.rootDOM.appendChild(app._render(app.vDOM))
+
     return app
   }
 
@@ -80,16 +89,6 @@ class Veact {
       callback()
     }
     this.components.add(component)
-  }
-
-  mount(App) {
-    if (!_.isFunction(App)) {
-      throw new Error(errorMessages.APP_IN_MOUNT_NOT_FUNCTION)
-    }
-    this.App = App
-    this.vDOM = App(this)
-    this.rootDOM.appendChild(this._render(this.vDOM))
-    return this
   }
 
   _update() {

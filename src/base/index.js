@@ -5,7 +5,7 @@ import { Header, Footer, Nav, Status, SearchBar } from '../components/'
 import './index.scss'
 import '../lib/css/reset.css'
 
-const App = app => {
+const App = () => {
   return (
     <div className="App-root" >
       <Header />
