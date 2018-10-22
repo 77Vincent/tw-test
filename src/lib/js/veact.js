@@ -43,7 +43,7 @@ class Veact {
     const app = new Veact(rootDOM, model, App)
     this.app = app
 
-    app.vDOM = App(app)
+    app.vDOM = App({ app })
     app.rootDOM.appendChild(app._render(app.vDOM))
 
     return app

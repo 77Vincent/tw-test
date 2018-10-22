@@ -1,5 +1,6 @@
 import Veact from '../../lib/js/veact'
 
+import Input from '../Input'
 import './index.scss'
 
 const switchSearchType = (app, key) => () => {
@@ -23,6 +24,8 @@ export default ({ app }) => {
           </div>
         ))
       }
+
+      <Input prefix='search' />
     </div>
   )
 }

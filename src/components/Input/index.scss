@@ -1,0 +1,16 @@
+@import '../../base/var.scss';
+
+.App-input {
+  position: relative;
+
+  .App-icon {
+    position: absolute;
+    left: 10px;
+  }
+
+  input {
+    background-color: $color-off-white;
+    outline: none;
+    height: 30px;
+  }
+}
