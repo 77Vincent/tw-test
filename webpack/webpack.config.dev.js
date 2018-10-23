@@ -7,11 +7,11 @@ const dest = Path.join(__dirname, '../dist')
 
 module.exports = merge(common, {
   mode: 'development',
-  devtool: 'cheap-eval-source-map',
   devServer: {
     contentBase: dest,
     inline: true
   },
+  devtool: 'eval-source-map',
   plugins: [
     new Webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development')

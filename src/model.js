@@ -1,10 +1,10 @@
 export default {
   searchIsFocus: false,
   navigationItems: [
-    'dashboard',
-    'agent',
-    'my cruise',
-    'help',
+    { id: 'dashboard', label: 'dashboard' },
+    { id: 'agent', label: 'agent' },
+    { id: 'myCruise', label: 'my cruise' },
+    { id: 'help', label: 'help' },
   ],
   histories: [
     'bjstdmngbgr02/Acceptance_test',

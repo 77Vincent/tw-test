@@ -21,7 +21,7 @@ const _ = {
 
 const errorMessages = {
   APP_IN_MOUNT_NOT_FUNCTION: 'Mount only accept one function.',
-  TEXT_NODE_IS_ARRAY: 'The node should not be type of array.', 
+  TEXT_NODE_IS_OBJECT: 'The node should not be type of object.', 
   PAYLOAD_ISNOT_PLAIN_OBJECT: 'The returned payload in the dispatch function should be a plain object.',
 }
 

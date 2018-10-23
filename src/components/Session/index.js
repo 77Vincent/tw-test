@@ -23,31 +23,33 @@ const osIndex = {
   },
 }
 
+const iconColor = '#777'
+
 export default ({ session, app }) => {
   return (
     <div className="App-session">
       <div className="App-session-image">
-        <Icon style={{ fontSize: '48px', color: osIndex[session.type].color }} type={osIndex[session.type].name}/>
+        <Icon size="48" color={osIndex[session.type].color} type={osIndex[session.type].name}/>
       </div>
 
       <div className="App-session-block-right">
         <div className="App-session-block-top">
-          <Icon type="monitor"/>
+          <Icon color={iconColor} type="monitor"/>
           <div className="App-session-url"> {session.url} </div>
           <div className="App-session-status-wrap">
             <div className={`App-session-status App-session-status-${session.status}`}> {session.status} </div>
           </div>
 
-          <Icon type="info-circled-alt"/>
+          <Icon color={iconColor} type="info-circled-alt"/>
           <div className="App-session-ip"> {session.ip} </div>
 
-          <Icon type="folder-empty"/>
+          <Icon color={iconColor} type="folder-empty"/>
           <div className="App-session-path"> {session.path} </div>
         </div>
 
         <div className="App-session-block-bottom">
           <div className="App-session-add">
-            <Icon style={{ color: '#fff' }} type="plus"/>
+            <Icon color="#fff" type="plus"/>
           </div>
           {
             session.browsers.map(browser => (
@@ -57,7 +59,7 @@ export default ({ session, app }) => {
               </div>
             ))
           }
-          <Button prefix="block" className="App-session-deny"> Deny </Button>
+          <Button iconStyle={{ color: "#fff" }} prefix="block" className="App-session-deny"> Deny </Button>
         </div>
       </div>
     </div>

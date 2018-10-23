@@ -3,7 +3,7 @@ import Veact from '../../lib/veact'
 import Icon from '../Icon'
 import './index.scss'
 
-export default ({ prefix, dark, children, style, className = ''}) => {
+export default ({ iconStyle, prefix, dark, children, style, className = ''}) => {
   const mergedStyle = Object.assign({
   }, style)
 
@@ -13,7 +13,7 @@ export default ({ prefix, dark, children, style, className = ''}) => {
       style={mergedStyle}
     >
       {
-        prefix ? <Icon type={prefix} className="App-button-icon" /> : null
+        prefix ? <Icon type={prefix} style={iconStyle} className="App-button-icon" /> : null
       }
       {children}
     </div>

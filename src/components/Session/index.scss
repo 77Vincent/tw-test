@@ -10,6 +10,10 @@ $wrap-padding: 20px;
   margin-bottom: 20px;
   position: relative;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   .App-session-image {
     width: 70px;
     height: 70px;
