@@ -1,0 +1,31 @@
+@import '../../base/var.scss';
+
+$height: 30px;
+
+.App-button {
+  display: inline-block;
+  height: $height;
+  line-height: $height;
+  background-color: $color-cyan;
+  color: $color-white;
+  padding: 0 25px;
+  cursor: pointer;
+
+  .App-button-icon {
+    vertical-align: middle;
+    margin-right: 6px;
+  }
+
+  &:hover {
+    background-color: $color-cyan-dark;
+  }
+
+  &.App-button-dark {
+    background-color: $color-blue;
+
+
+    &:hover {
+      background-color: $color-blue-dark;
+    }
+  }
+}

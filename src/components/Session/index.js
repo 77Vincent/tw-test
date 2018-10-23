@@ -1,6 +1,7 @@
 import Veact from '../../lib/js/veact'
 
 import Icon from '../Icon'
+import Button from '../Button'
 import './index.scss'
 
 export default ({ session, app }) => {
@@ -28,10 +29,7 @@ export default ({ session, app }) => {
             </div>
           ))
         }
-        <div className="App-session-deny">
-          <Icon />
-          Deny
-        </div>
+        <Button> Deny </Button>
       </div>
     </div>
   )
