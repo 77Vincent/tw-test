@@ -21,6 +21,13 @@ $wrap-padding: 20px;
     margin-right: 30px;
   }
 
+  .App-session-delete {
+    cursor: pointer;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
   .App-session-block-right {
     display: inline-block;
     vertical-align: top;
@@ -74,6 +81,11 @@ $wrap-padding: 20px;
     line-height: $size-button;
     margin-right: 10px;
     text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-cyan-dark;
+    }
   }
 
   .App-session-browser {
