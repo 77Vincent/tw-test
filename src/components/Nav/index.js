@@ -1,9 +1,8 @@
 import Veact from '../../lib/js/veact'
 
 import './index.scss'
-import logo from '../../assets/images/logo.png'
 
-const Nav = ({ app }) => {
+export default ({ app }) => {
   const { model } = app
 
   return (
@@ -21,5 +20,3 @@ const Nav = ({ app }) => {
     </div>
   )
 }
-
-export default Nav 

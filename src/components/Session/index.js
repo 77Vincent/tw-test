@@ -28,6 +28,10 @@ export default ({ session, app }) => {
             </div>
           ))
         }
+        <div className="App-session-deny">
+          <Icon />
+          Deny
+        </div>
       </div>
     </div>
   )

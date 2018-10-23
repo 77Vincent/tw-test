@@ -48,4 +48,11 @@ $size-button: 25px;
     height: $size-button;
     line-height: $size-button;
   }
+
+  .App-session-deny {
+    color: $color-white;
+    background-color: $color-cyan;
+    height: 30px;
+    line-height: 30px;
+  }
 }
