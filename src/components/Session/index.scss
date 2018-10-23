@@ -1,15 +1,19 @@
 @import '../../base/var.scss';
 
 $size-button: 25px;
+$wrap-padding: 20px;
 
 .App-session {
   background-color: #fff;
-  padding: 30px;
-  height: 100px;
+  padding: $wrap-padding;
+  height: 110px;
   margin-bottom: 20px;
+  position: relative;
 
   .App-session-block-bottom,
   .App-session-block-top {
+    height: 48px;
+
     * {
       display: inline-block;
       vertical-align: middle;
@@ -41,11 +45,24 @@ $size-button: 25px;
     width: $size-button;
     height: $size-button;
     line-height: $size-button;
+    margin-right: 10px;
   }
 
   .App-session-browser {
     background-color: $color-off-white;
     height: $size-button;
     line-height: $size-button;
+    padding: 0 10px;
+    margin-right: 10px;
+
+    span {
+      margin-right: 6px;
+    }
+  }
+
+  .App-session-deny {
+    position: absolute;
+    right: $wrap-padding;
+    bottom: $wrap-padding - 5;
   }
 }

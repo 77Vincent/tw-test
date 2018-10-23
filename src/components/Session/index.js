@@ -24,12 +24,12 @@ export default ({ session, app }) => {
         {
           session.browsers.map(browser => (
             <div className="App-session-browser">
-              {app.model.browserIndex[browser].name}
-              <Icon />
+              <span>{app.model.browserIndex[browser].name}</span>
+              <Icon size="s"/>
             </div>
           ))
         }
-        <Button> Deny </Button>
+        <Button className="App-session-deny"> Deny </Button>
       </div>
     </div>
   )

@@ -4,7 +4,6 @@ import Icon from '../Icon'
 import './index.scss'
 
 export default ({ dark, children, style, className = ''}) => {
-  console.log(1111, dark)
   const mergedStyle = Object.assign({
   }, style)
 

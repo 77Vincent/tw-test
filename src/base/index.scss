@@ -13,6 +13,8 @@
     padding-bottom: 30px;
     max-width: 1200px;
     position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
 
   .App-content {

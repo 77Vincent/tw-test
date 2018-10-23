@@ -6,7 +6,8 @@
   width: $width-nav;
   height: 100%;
   padding-top: 30px;
-  position: relative;
+  padding-bottom: 30px;
+  position: fixed;
   z-index: 1;
 
   .App-nav-item {
@@ -24,11 +25,11 @@
   }
 
   .App-nav-history {
-    padding: 0 15px 20px;
+    padding: 0 15px;
     color: $color-gray;
     position: absolute;
     width: 100%;
-    bottom: 0;
+    bottom: 100px;
     list-style-position: inside;
 
     .App-nav-history-title {

@@ -79,5 +79,26 @@ export default {
     url: 'bjstwojfd.thoughtworks.com',
     path: '/var/lib/cruise-agent',
     browsers: [1, 3, 2],
+  }, {
+    status: 'idle',
+    ip: '192.168.1.92',
+    type: 'debian',
+    url: 'bjstwojfd.thoughtworks.com',
+    path: '/var/lib/cruise-agent',
+    browsers: [1, 3, 2],
+  }, {
+    status: 'idle',
+    ip: '192.168.1.92',
+    type: 'debian',
+    url: 'bjstwojfd.thoughtworks.com',
+    path: '/var/lib/cruise-agent',
+    browsers: [1, 3, 2],
+  }, {
+    status: 'idle',
+    ip: '192.168.1.92',
+    type: 'debian',
+    url: 'bjstwojfd.thoughtworks.com',
+    path: '/var/lib/cruise-agent',
+    browsers: [1, 3, 2],
   }],
 } 
