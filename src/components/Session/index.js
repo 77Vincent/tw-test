@@ -11,30 +11,32 @@ export default ({ session, app }) => {
 
       <div className="App-session-block-right">
         <div className="App-session-block-top">
-          <Icon opacity={0.5} />
+          <Icon type="monitor"/>
           <div className="App-session-url"> {session.url} </div>
           <div className="App-session-status-wrap">
             <div className={`App-session-status App-session-status-${session.status}`}> {session.status} </div>
           </div>
 
-          <Icon opacity={0.5} />
+          <Icon type="info-circled-alt"/>
           <div className="App-session-ip"> {session.ip} </div>
 
-          <Icon opacity={0.5} />
+          <Icon type="folder-empty"/>
           <div className="App-session-path"> {session.path} </div>
         </div>
 
         <div className="App-session-block-bottom">
-          <div className="App-session-add"><Icon /></div>
+          <div className="App-session-add">
+            <Icon style={{ color: '#fff' }} type="plus"/>
+          </div>
           {
             session.browsers.map(browser => (
               <div className="App-session-browser">
                 <span>{app.model.browserIndex[browser].name}</span>
-                <Icon size="s"/>
+                <Icon type="trash-1"/>
               </div>
             ))
           }
-          <Button className="App-session-deny"> Deny </Button>
+          <Button prefix="block" className="App-session-deny"> Deny </Button>
         </div>
       </div>
     </div>
