@@ -4,10 +4,31 @@ import Icon from '../Icon'
 import Button from '../Button'
 import './index.scss'
 
+const osIndex = {
+  windows: {
+    name: 'windows',
+    color: '#00b4cf',
+  },
+  debian: {
+    name: 'lastfm',
+    color: 'red',
+  },
+  redhat: {
+    name: 'chrome',
+    color: '#ff9a2a',
+  },
+  ubuntu: {
+    name: 'drupal',
+    color: '#435466',
+  },
+}
+
 export default ({ session, app }) => {
   return (
     <div className="App-session">
-      <div className="App-session-image"></div>
+      <div className="App-session-image">
+        <Icon style={{ fontSize: '48px', color: osIndex[session.type].color }} type={osIndex[session.type].name}/>
+      </div>
 
       <div className="App-session-block-right">
         <div className="App-session-block-top">
