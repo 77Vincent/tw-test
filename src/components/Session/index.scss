@@ -1,11 +1,14 @@
 @import '../../base/var.scss';
 
+$size-button: 25px;
+
 .App-session {
   background-color: #fff;
   padding: 30px;
   height: 100px;
   margin-bottom: 20px;
 
+  .App-session-block-bottom,
   .App-session-block-top {
     * {
       display: inline-block;
@@ -31,5 +34,18 @@
   }
   .App-session-status-idle {
     background-color: $color-green;
+  }
+
+  .App-session-add {
+    background-color: $color-cyan;
+    width: $size-button;
+    height: $size-button;
+    line-height: $size-button;
+  }
+
+  .App-session-browser {
+    background-color: $color-off-white;
+    height: $size-button;
+    line-height: $size-button;
   }
 }
