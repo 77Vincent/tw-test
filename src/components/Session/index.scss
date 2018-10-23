@@ -5,4 +5,31 @@
   padding: 30px;
   height: 100px;
   margin-bottom: 20px;
+
+  .App-session-block-top {
+    * {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  .App-session-url {
+    color: $color-cyan;
+    font-weight: 700;
+  }
+
+  .App-session-image {
+
+  }
+
+  .App-session-status {
+    padding: 2px 9px;
+    color: #fff;
+  }
+  .App-session-status-building {
+    background-color: $color-yellow;
+  }
+  .App-session-status-idle {
+    background-color: $color-green;
+  }
 }

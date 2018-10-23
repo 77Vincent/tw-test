@@ -9,7 +9,7 @@ const typeIndex = {
 
 const sizeIndex = { s: 15, m: 18, l: 24 }
 
-export default ({ type = 'search', size = 'm', opacity = 1, style }) => {
+export default ({ type = 'search', size = 'm', opacity = 1, style, className = ''}) => {
   const mergedStyle = Object.assign({
     opacity,
     width: `${sizeIndex[size]}px`,
@@ -17,7 +17,7 @@ export default ({ type = 'search', size = 'm', opacity = 1, style }) => {
 
   return (
     <div
-      className="App-icon"
+      className={`App-icon ${className}`}
       style={mergedStyle}
     >
       <img src={typeIndex[type]}/>

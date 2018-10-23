@@ -43,25 +43,30 @@ export default {
     ip: '192.168.0.102',
     type: 'windows',
     url: 'bjstwojfd.thoughtworks.com',
+    path: '/var/lib/cruise-agent',
   }, {
     status: 'idle',
     ip: '192.168.0.102',
     type: 'windows',
     url: 'bjstwojfd.thoughtworks.com',
+    path: '/var/lib/cruise-agent',
   }, {
     status: 'idle',
     ip: '192.168.1.92',
     type: 'ubuntu',
     url: 'bjstwojfd.thoughtworks.com',
+    path: '/var/lib/cruise-agent',
   }, {
     status: 'building',
     ip: '192.168.1.92',
     type: 'redhat',
     url: 'bjstwojfd.thoughtworks.com',
+    path: '/var/lib/cruise-agent',
   }, {
     status: 'idle',
     ip: '192.168.1.92',
     type: 'debian',
     url: 'bjstwojfd.thoughtworks.com',
+    path: '/var/lib/cruise-agent',
   }],
 } 
