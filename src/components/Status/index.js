@@ -1,4 +1,4 @@
-import Veact from '../../lib/js/veact'
+import Veact from '../../lib/veact'
 
 import './index.scss'
 

@@ -1,9 +1,10 @@
-import Veact from '../lib/js/veact'
+import Veact from '../lib/veact'
 
 import { Header, Footer, Nav, Status, SearchBar, Session } from '../components/'
 
 import './index.scss'
-import '../lib/css/reset.css'
+import '../assets/css/icon-fonts.css'
+import '../assets/css/reset.css'
 
 const App = ({ app }) => {
   return (
