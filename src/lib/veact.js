@@ -93,7 +93,7 @@ class Veact {
 
   _update() {
     this.rootDOM.removeChild(this.rootDOM.children[0])
-    this.rootDOM.appendChild(this._render(this.App(this)))
+    this.rootDOM.appendChild(this._render(this.App({ app : this })))
   }
 
   dispatch = (callback) => {

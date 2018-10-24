@@ -98,6 +98,14 @@ $wrap-padding: 20px;
     span {
       margin-right: 6px;
     }
+
+    .App-session-delete {
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
   }
 
   .App-session-deny {

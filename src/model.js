@@ -45,6 +45,7 @@ export default {
     { id: 4, name: 'Chrome' },
   ],
   sessions: [{
+    id: 0,
     status: 'building',
     ip: '192.168.0.102',
     type: 'windows',
@@ -52,6 +53,7 @@ export default {
     path: '/var/lib/cruise-agent',
     browsers: [0, 1, 2, 3],
   }, {
+    id: 1, 
     status: 'idle',
     ip: '192.168.0.102',
     type: 'windows',
@@ -59,6 +61,7 @@ export default {
     path: '/var/lib/cruise-agent',
     browsers: [0, 1, 2],
   }, {
+    id: 2, 
     status: 'idle',
     ip: '192.168.1.92',
     type: 'ubuntu',
@@ -66,6 +69,7 @@ export default {
     path: '/var/lib/cruise-agent',
     browsers: [1, 2, 3],
   }, {
+    id: 3, 
     status: 'building',
     ip: '192.168.1.92',
     type: 'redhat',
@@ -73,6 +77,7 @@ export default {
     path: '/var/lib/cruise-agent',
     browsers: [2, 3],
   }, {
+    id: 4, 
     status: 'idle',
     ip: '192.168.1.92',
     type: 'debian',
@@ -80,6 +85,7 @@ export default {
     path: '/var/lib/cruise-agent',
     browsers: [1, 3, 2],
   }, {
+    id: 5, 
     status: 'idle',
     ip: '192.168.1.92',
     type: 'ubuntu',
@@ -87,6 +93,7 @@ export default {
     path: '/var/lib/cruise-agent',
     browsers: [1, 3, 2],
   }, {
+    id: 6, 
     status: 'idle',
     ip: '192.168.1.92',
     type: 'windows',
@@ -94,6 +101,7 @@ export default {
     path: '/var/lib/cruise-agent',
     browsers: [1, 3, 2],
   }, {
+    id: 7, 
     status: 'idle',
     ip: '192.168.1.92',
     type: 'ubuntu',

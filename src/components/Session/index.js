@@ -25,6 +25,23 @@ const osIndex = {
 
 const iconColor = '#777'
 
+const deleteBrowser = (app, session, browserIndex) => () => {
+  app.dispatch(model => {
+    const newBrowsers = session.browsers.filter(v => v !== browserIndex)
+    const newSession = Object.assign({}, session)
+    newSession.browsers = newBrowsers
+    console.log(newSession)
+    const newSessions = [...model.sessions].map(v => {
+      if (v.id === session.id) {
+        return newSession
+      } else {
+        return v
+      }
+    })
+    return { sessions: newSessions }
+  })
+}
+
 export default ({ session, app }) => {
   return (
     <div className="App-session">
@@ -53,9 +70,12 @@ export default ({ session, app }) => {
           </div>
           {
             session.browsers.map(browser => (
-              <div className="App-session-browser">
+              <div
+                className="App-session-browser"
+                onClick={deleteBrowser(app, session, browser)}
+              >
                 <span>{app.model.browserIndex[browser].name}</span>
-                <Icon type="trash-1"/>
+                <Icon className="App-session-delete" type="trash-1"/>
               </div>
             ))
           }
