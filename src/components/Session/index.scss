@@ -3,6 +3,8 @@
 $size-button: 25px;
 $wrap-padding: 20px;
 
+$size-image: 70px;
+
 .App-session {
   background-color: #fff;
   padding: $wrap-padding;
@@ -10,13 +12,28 @@ $wrap-padding: 20px;
   margin-bottom: 20px;
   position: relative;
 
+  .App-session-popup {
+    width: 500px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid $color-cyan;
+    position: absolute;
+    top: 100%;
+    left: $size-image + 50;
+    z-index: 1;
+
+    .App-session-popup-input {
+      margin: 10px 0 20px;
+    }
+  }
+
   &:last-child {
     margin-bottom: 0;
   }
 
   .App-session-image {
-    width: 70px;
-    height: 70px;
+    width: $size-image;
+    height: $size-image;
     display: inline-block;
     margin-right: 30px;
   }

@@ -2,7 +2,7 @@
 
 .App-input {
   position: relative;
-  display: inline-block;
+  width: 100%;
 
   .App-icon {
     position: absolute;
@@ -11,8 +11,9 @@
   }
 
   input {
-    background-color: $color-off-white;
+    width: 100%;
     outline: none;
+    text-indent: 1em;
     height: 30px;
   }
 }

@@ -44,6 +44,7 @@ export default {
     { id: 3, name: 'Ubuntu' },
     { id: 4, name: 'Chrome' },
   ],
+  isAddingResource: false,
   sessions: [{
     id: 0,
     status: 'building',

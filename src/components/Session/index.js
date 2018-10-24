@@ -1,6 +1,7 @@
 import Veact from '../../lib/veact'
 
 import Icon from '../Icon'
+import Input from '../Input'
 import Button from '../Button'
 import './index.scss'
 
@@ -25,15 +26,18 @@ const osIndex = {
 
 const iconColor = '#777'
 
+const addBrowser = (app) => () => {
+  app.dispatch(model => {
+
+  })
+}
+
 const deleteBrowser = (app, session, browserIndex) => () => {
   app.dispatch(model => {
-    const newBrowsers = session.browsers.filter(v => v !== browserIndex)
-    const newSession = Object.assign({}, session)
-    newSession.browsers = newBrowsers
-    console.log(newSession)
-    const newSessions = [...model.sessions].map(v => {
+    session.browsers = session.browsers.filter(v => v !== browserIndex)
+    const newSessions = model.sessions.map(v => {
       if (v.id === session.id) {
-        return newSession
+        return session 
       } else {
         return v
       }
@@ -45,6 +49,17 @@ const deleteBrowser = (app, session, browserIndex) => () => {
 export default ({ session, app }) => {
   return (
     <div className="App-session">
+      <div
+        className="App-session-popup"
+        style={{ }}
+      >
+        <div>Separate multiple resource name with commas.</div>
+        <Input className="App-session-popup-input" placeholder="e.g. Chrome, Firefox" />
+
+        <Button>Add resources</Button>
+        <Button>Cancel</Button>
+      </div>
+
       <div className="App-session-image">
         <Icon size="48" color={osIndex[session.type].color} type={osIndex[session.type].name}/>
       </div>
@@ -65,7 +80,10 @@ export default ({ session, app }) => {
         </div>
 
         <div className="App-session-block-bottom">
-          <div className="App-session-add">
+          <div
+            className="App-session-add"
+            onClick={addBrowser(app)}
+          >
             <Icon color="#fff" type="plus"/>
           </div>
           {
