@@ -6,36 +6,15 @@ export default {
     { id: 'myCruise', label: 'my cruise' },
     { id: 'help', label: 'help' },
   ],
-  histories: [
-    'bjstdmngbgr02/Acceptance_test',
-    'bjstdmngbgr02/Acceptance_test',
-    'bjstdmngbgr02/Acceptance_test',
-    'bjstdmngbgr02/Acceptance_test',
-    'bjstdmngbgr02/Acceptance_test',
-  ],
+  histories: [1, 2, 3, 4, 5, 6].map(() => 'bjstdmngbgr02/Acceptance_test'),
   status: {
-    building: {
-      title: 'building',
-      count: 3,
-    },
-    idle: {
-      title: 'idle',
-      count: 5,
-    },
+    building: { title: 'building', count: 3 },
+    idle: { title: 'idle', count: 5 },
   },
   types: {
-    all: {
-      title: 'all',
-      count: 8,
-    },
-    physical: {
-      title: 'physical',
-      count: 5,
-    },
-    virtual: {
-      title: 'virtual',
-      count: 3,
-    },
+    all: { title: 'all', count: 8 },
+    physical: { title: 'physical', count: 5 },
+    virtual: { title: 'virtual', count: 3 },
   },
   currentSearchType: 'all',
   browserIndex: [
@@ -53,6 +32,7 @@ export default {
     path: '/var/lib/cruise-agent',
     browsers: [0, 1, 2, 3],
     isEditing: false,
+    addingResource: '',
   }, {
     id: 1, 
     status: 'idle',
@@ -62,6 +42,7 @@ export default {
     path: '/var/lib/cruise-agent',
     browsers: [0, 1, 2],
     isEditing: false,
+    addingResource: '',
   }, {
     id: 2, 
     status: 'idle',
@@ -71,6 +52,7 @@ export default {
     path: '/var/lib/cruise-agent',
     browsers: [1, 2, 3],
     isEditing: false,
+    addingResource: '',
   }, {
     id: 3, 
     status: 'building',
@@ -80,6 +62,7 @@ export default {
     path: '/var/lib/cruise-agent',
     browsers: [2, 3],
     isEditing: false,
+    addingResource: '',
   }, {
     id: 4, 
     status: 'idle',
@@ -89,6 +72,7 @@ export default {
     path: '/var/lib/cruise-agent',
     browsers: [1, 3, 2],
     isEditing: false,
+    addingResource: '',
   }, {
     id: 5, 
     status: 'idle',
@@ -98,6 +82,7 @@ export default {
     path: '/var/lib/cruise-agent',
     browsers: [1, 3, 2],
     isEditing: false,
+    addingResource: '',
   }, {
     id: 6, 
     status: 'idle',
@@ -107,6 +92,7 @@ export default {
     path: '/var/lib/cruise-agent',
     browsers: [1, 3, 2],
     isEditing: false,
+    addingResource: '',
   }, {
     id: 7, 
     status: 'idle',
@@ -116,5 +102,6 @@ export default {
     path: '/var/lib/cruise-agent',
     browsers: [1, 3, 2],
     isEditing: false,
+    addingResource: '',
   }],
 } 

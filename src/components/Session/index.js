@@ -26,6 +26,12 @@ const osIndex = {
 
 const iconColor = '#777'
 
+const addResource = (app, session) => () => {
+  const resource = session.addingResource.split(',')
+  console.log(resource)
+  closePopup(app)()
+}
+
 const addBrowser = (app, session) => () => {
   app.dispatch(model => {
     const newSessions = model.sessions.map(v => {
@@ -41,7 +47,7 @@ const addBrowser = (app, session) => () => {
   })
 }
 
-const closePopup = (app) => () => {
+const closePopup = app => () => {
   app.dispatch(model => {
     const newSessions = model.sessions.map(v => {
       v.isEditing = false
@@ -74,9 +80,26 @@ export default ({ session, app }) => {
       >
         <Icon onClick={closePopup(app)} type="cancel" color="#00b4cf" size="18" className="App-session-popup-cancel"/>
         <div>Separate multiple resource name with commas.</div>
-        <Input className="App-session-popup-input" placeholder="e.g. Chrome, Firefox" />
+        <Input
+          className="App-session-popup-input"
+          value={session.addingResource}
+          onChange={(e) => {
+            closePopup(app)()
+            app.dispatch(model => {
+              const newSessions = model.sessions.map(v => {
+                if (v.id === session.id) {
+                  v.addingResource = e.target.value
+                  return v
+                } else {
+                  return v
+                }
+              })
+              return { sessions: newSessions }
+            })
+          }}
+          placeholder="e.g. Chrome, Firefox" />
 
-        <Button style={{ marginRight: '10px' }}>Add resources</Button>
+        <Button onClick={addResource(app, session)} style={{ marginRight: '10px' }}>Add resources</Button>
         <Button onClick={closePopup(app)} >Cancel</Button>
       </div>
 

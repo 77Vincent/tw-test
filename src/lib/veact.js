@@ -118,7 +118,7 @@ class Veact {
     const $el = document.createElement(vDOM.type)
 
     // Apply valid DOM properties to DOM
-    const events = ['onClick', 'onFocus', 'onBlur']
+    const events = ['onClick', 'onFocus', 'onBlur', 'onChange', 'onInput']
     for (let event of events) {
       const eventFn = vDOM.props[event]
       if (eventFn) {
@@ -126,7 +126,7 @@ class Veact {
       }
     }
 
-    const plainProperties = ['src', 'className', 'autofocus', 'placeholder']
+    const plainProperties = ['src', 'className', 'autofocus', 'placeholder', 'value']
     for (let key of plainProperties) {
       if (vDOM.props[key]) {
         $el[key] = vDOM.props[key]

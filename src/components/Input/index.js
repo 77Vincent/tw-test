@@ -7,7 +7,7 @@ const toggleFocus = (app, boolean) => () => {
   // app.dispatch(() => ({ searchIsFocus: boolean }))
 }
 
-export default ({ prefix, app, placeholder, className }) => {
+export default ({ prefix, app, placeholder, className, onChange, value }) => {
   const { searchIsFocus } = app.model
 
   return (
@@ -18,8 +18,10 @@ export default ({ prefix, app, placeholder, className }) => {
         : null
       }
       <input
+        type="text"
+        value={value}
         placeholder={placeholder}
-        onFocus={toggleFocus(app, true)}
+        onChange={onChange}
       />
     </div>
   )
