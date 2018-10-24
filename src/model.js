@@ -44,7 +44,6 @@ export default {
     { id: 3, name: 'Ubuntu' },
     { id: 4, name: 'Chrome' },
   ],
-  isAddingResource: false,
   sessions: [{
     id: 0,
     status: 'building',
@@ -53,6 +52,7 @@ export default {
     url: 'bjstwojfd.thoughtworks.com',
     path: '/var/lib/cruise-agent',
     browsers: [0, 1, 2, 3],
+    isEditing: false,
   }, {
     id: 1, 
     status: 'idle',
@@ -61,6 +61,7 @@ export default {
     url: 'bjstwojfd.thoughtworks.com',
     path: '/var/lib/cruise-agent',
     browsers: [0, 1, 2],
+    isEditing: false,
   }, {
     id: 2, 
     status: 'idle',
@@ -69,6 +70,7 @@ export default {
     url: 'bjstwojfd.thoughtworks.com',
     path: '/var/lib/cruise-agent',
     browsers: [1, 2, 3],
+    isEditing: false,
   }, {
     id: 3, 
     status: 'building',
@@ -77,6 +79,7 @@ export default {
     url: 'bjstwojfd.thoughtworks.com',
     path: '/var/lib/cruise-agent',
     browsers: [2, 3],
+    isEditing: false,
   }, {
     id: 4, 
     status: 'idle',
@@ -85,6 +88,7 @@ export default {
     url: 'bjstwojfd.thoughtworks.com',
     path: '/var/lib/cruise-agent',
     browsers: [1, 3, 2],
+    isEditing: false,
   }, {
     id: 5, 
     status: 'idle',
@@ -93,6 +97,7 @@ export default {
     url: 'bjstwojfd.thoughtworks.com',
     path: '/var/lib/cruise-agent',
     browsers: [1, 3, 2],
+    isEditing: false,
   }, {
     id: 6, 
     status: 'idle',
@@ -101,6 +106,7 @@ export default {
     url: 'bjstwojfd.thoughtworks.com',
     path: '/var/lib/cruise-agent',
     browsers: [1, 3, 2],
+    isEditing: false,
   }, {
     id: 7, 
     status: 'idle',
@@ -109,5 +115,6 @@ export default {
     url: 'bjstwojfd.thoughtworks.com',
     path: '/var/lib/cruise-agent',
     browsers: [1, 3, 2],
+    isEditing: false,
   }],
 } 

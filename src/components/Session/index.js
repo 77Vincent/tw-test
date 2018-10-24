@@ -26,9 +26,28 @@ const osIndex = {
 
 const iconColor = '#777'
 
-const addBrowser = (app) => () => {
+const addBrowser = (app, session) => () => {
   app.dispatch(model => {
+    const newSessions = model.sessions.map(v => {
+      if (v.id === session.id) {
+        v.isEditing = true
+        return v
+      } else {
+        v.isEditing = false
+        return v
+      }
+    })
+    return { sessions: newSessions }
+  })
+}
 
+const closePopup = (app) => () => {
+  app.dispatch(model => {
+    const newSessions = model.sessions.map(v => {
+      v.isEditing = false
+      return v
+    })
+    return { sessions: newSessions }
   })
 }
 
@@ -51,13 +70,13 @@ export default ({ session, app }) => {
     <div className="App-session">
       <div
         className="App-session-popup"
-        style={{ }}
+        style={{ visibility: session.isEditing ? 'visible' : 'hidden' }}
       >
         <div>Separate multiple resource name with commas.</div>
         <Input className="App-session-popup-input" placeholder="e.g. Chrome, Firefox" />
 
-        <Button>Add resources</Button>
-        <Button>Cancel</Button>
+        <Button style={{ marginRight: '10px' }}>Add resources</Button>
+        <Button onClick={closePopup(app)} >Cancel</Button>
       </div>
 
       <div className="App-session-image">
@@ -82,7 +101,7 @@ export default ({ session, app }) => {
         <div className="App-session-block-bottom">
           <div
             className="App-session-add"
-            onClick={addBrowser(app)}
+            onClick={addBrowser(app, session)}
           >
             <Icon color="#fff" type="plus"/>
           </div>
