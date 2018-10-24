@@ -25,6 +25,17 @@ $size-image: 70px;
     .App-session-popup-input {
       margin: 10px 0 20px;
     }
+
+    .App-session-popup-cancel {
+      position: absolute;
+      right: 10px;
+      top: 7px;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
   }
 
   &:last-child {

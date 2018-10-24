@@ -7,7 +7,8 @@ export default ({
   style,
   className = '',
   size = 16,
-  color = '#000'
+  color = '#000',
+  onClick
 }) => {
   const mergedStyle = Object.assign({
     fontSize: `${size}px`,
@@ -18,6 +19,7 @@ export default ({
     <div
       className={`App-icon ${className} icon-${type}`}
       style={mergedStyle}
+      onClick={onClick}
     >
     </div>
   )

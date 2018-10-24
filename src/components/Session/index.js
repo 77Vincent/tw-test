@@ -72,6 +72,7 @@ export default ({ session, app }) => {
         className="App-session-popup"
         style={{ visibility: session.isEditing ? 'visible' : 'hidden' }}
       >
+        <Icon onClick={closePopup(app)} type="cancel" color="#00b4cf" size="18" className="App-session-popup-cancel"/>
         <div>Separate multiple resource name with commas.</div>
         <Input className="App-session-popup-input" placeholder="e.g. Chrome, Firefox" />
 
