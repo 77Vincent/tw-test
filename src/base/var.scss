@@ -15,6 +15,8 @@ $color-cyan: #00b4cf;
 $color-yellow: #ff9a2a;
 $color-green: #7fbc39;
 
+$box-shadow: 0 0 6px 0 $color-gray;
+
 // Font family
 $font-family: 'Avenir', 'Helvetica', 'Arial', 'sans-serif';
 
@@ -26,8 +28,11 @@ $font-family: 'Avenir', 'Helvetica', 'Arial', 'sans-serif';
     content: "";
   }
 }
-$box-shadow: 0 0 6px 0 $color-gray;
 
 // Dimension
 $width-nav: 270px;
 
+// Break-point
+$bp-desktop-HD: 1200px;
+$bp-desktop: 1024px;
+$bp-tablet: 768px;

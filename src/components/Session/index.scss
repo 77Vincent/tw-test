@@ -47,6 +47,10 @@ $size-image: 70px;
     height: $size-image;
     display: inline-block;
     margin-right: 30px;
+
+    @media screen and (max-width: $bp-desktop-HD) {
+      display: none;  
+    }
   }
 
   .App-session-delete {
