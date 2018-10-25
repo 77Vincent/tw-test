@@ -25,7 +25,7 @@ npm test
 ```
 
 ## Architecture
-The architecture of this project is pretty much like a typical React-based project.
+The architecture of this project is pretty much like a typical React-based project. All the core folders and files are described as follows. To better understand the architecture, it is nice to have some basic understanding of both [React](https://reactjs.org/) and [Redux](https://redux.js.org/).
 
 #### /src/assets/
 For all the static assets such as images, fonts etc.
