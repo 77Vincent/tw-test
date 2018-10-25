@@ -1,7 +1,9 @@
 # Front-end Documentation
 
 ## Overall
-According to the test requirement, no runtime third-part library or framework is used on this project but tools for development are used such as ESlint, Babel, Webpack and its corresponding toolchain like various kinds of loaders. To boost productivity, I create a React-like library for building the interactive user interface which is called "Veact" for this project, the source code of this library is stored in the /src/lib folder. And the library is hosted on another repository under my github, detailed [documentation](https://github.com/77Vincent/veact) is available there.
+According to the test requirement, no runtime third-part library or framework is used on this project but tools for development are used such as ESlint, Babel, Webpack and its corresponding toolchain like various kinds of loaders. To boost productivity, I create a React-like library for building the interactive user interface which is called "Veact" for this project, the homemade "React" behaves pretty much like an original React which supports virtual DOM, JSX, the enhancement is to have a built-in Redux-like state management system which makes state management easier and more intuitive. The source code of this library is stored in the /src/lib folder. And the library is hosted on another repository under my github, detailed [documentation](https://github.com/77Vincent/veact) is available there.
+
+Due to time limit and initial focus of building the UI library, some parts are missing from the current version which includes unit test and full-range responsiveness.
 
 ## Pre-run
 ```bash
