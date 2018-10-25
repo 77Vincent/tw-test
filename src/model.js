@@ -33,7 +33,7 @@ export default {
     type: 'windows',
     url: 'bjstwojfd.thoughtworks.com',
     path: '/var/lib/cruise-agent',
-    browsers: [0, 1, 2, 3],
+    browsers: [1, 2, 3],
     isEditing: false,
     addingResource: '',
   }, {
@@ -43,7 +43,7 @@ export default {
     type: 'windows',
     url: 'bjstwojfd.thoughtworks.com',
     path: '/var/lib/cruise-agent',
-    browsers: [0, 1, 2],
+    browsers: [1, 2],
     isEditing: false,
     addingResource: '',
   }, {

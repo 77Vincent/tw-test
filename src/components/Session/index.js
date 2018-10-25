@@ -23,7 +23,6 @@ const addResource = (app, session) => () => {
       }
     }
   }
-  console.log(result)
   session.browsers.push(...result)
   app.dispatch(model => {
     const newSessions = model.sessions.map(v => {
@@ -136,12 +135,12 @@ export default ({ session, app }) => {
             <Icon color="#fff" type="plus"/>
           </div>
           {
-            session.browsers.map(browser => (
+            session.browsers.map(browserId => (
               <div
                 className="App-session-browser"
-                onClick={deleteBrowser(app, session, browser)}
+                onClick={deleteBrowser(app, session, browserId)}
               >
-                <span>{app.model.browserIndex[browser].name}</span>
+                <span>{app.model.browserIndex.filter(v => v.id === browserId)[0].name}</span>
                 <Icon className="App-session-delete" type="trash-1"/>
               </div>
             ))

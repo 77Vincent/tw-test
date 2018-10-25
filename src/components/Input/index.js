@@ -18,6 +18,7 @@ export default ({ prefix, app, placeholder, className, onChange, onInput, value,
         : null
       }
       <input
+        autofocus
         type="text"
         value={value}
         placeholder={placeholder}
