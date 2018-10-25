@@ -6,22 +6,10 @@ import Button from '../Button'
 import './index.scss'
 
 const osIndex = {
-  windows: {
-    name: 'windows',
-    color: '#00b4cf',
-  },
-  debian: {
-    name: 'lastfm',
-    color: 'red',
-  },
-  redhat: {
-    name: 'chrome',
-    color: '#ff9a2a',
-  },
-  ubuntu: {
-    name: 'drupal',
-    color: '#435466',
-  },
+  windows: { name: 'windows', color: '#00b4cf' },
+  debian: { name: 'lastfm', color: 'red' },
+  redhat: { name: 'chrome', color: '#ff9a2a' },
+  ubuntu: { name: 'drupal', color: '#435466' },
 }
 
 const iconColor = '#777'
@@ -84,10 +72,10 @@ export default ({ session, app }) => {
           className="App-session-popup-input"
           value={session.addingResource}
           onChange={(e) => {
-            closePopup(app)()
             app.dispatch(model => {
               const newSessions = model.sessions.map(v => {
                 if (v.id === session.id) {
+                  v.isEditing = false
                   v.addingResource = e.target.value
                   return v
                 } else {
