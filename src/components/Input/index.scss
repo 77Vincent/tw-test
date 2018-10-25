@@ -2,12 +2,12 @@
 
 .App-input {
   position: relative;
-  width: 100%;
 
   .App-icon {
     position: absolute;
     left: 9px;
-    top: 4px;
+    top: 7px;
+    opacity: 0.5;
   }
 
   input {

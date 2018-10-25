@@ -1,5 +1,6 @@
 export default {
   searchIsFocus: false,
+  searchInput: '',
   navigationItems: [
     { id: 'dashboard', label: 'dashboard' },
     { id: 'agent', label: 'agent' },

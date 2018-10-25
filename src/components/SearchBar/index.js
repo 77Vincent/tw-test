@@ -7,6 +7,10 @@ const switchSearchType = (app, key) => () => {
   app.dispatch(() => ({ currentSearchType: key }))
 }
 
+const inputHandler = app => (e) => {
+  app.dispatch(() => ({ searchInput: e.target.value }))
+}
+
 export default ({ app }) => {
   const { model } = app
 
@@ -22,7 +26,12 @@ export default ({ app }) => {
         ))
       }
 
-      <Input prefix='search' />
+      <Input
+        className="App-search-input"
+        prefix='search'
+        value={app.model.searchInput}
+        onInput={inputHandler(app)}
+      />
     </div>
   )
 }
