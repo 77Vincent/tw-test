@@ -24,6 +24,22 @@ $heigth-search: 50px;
     }
   }
   
+  .App-search-view {
+    line-height: $heigth-search;
+    padding-right: 20px;
+    float: right;
+
+    .App-search-view-button {
+      margin-left: 10px;
+
+      cursor: pointer;
+
+      &:hover {
+        color: $color-cyan !important;
+      }
+    }
+  }
+  
   .App-search-input {
     display: inline-block;
     margin-left: 30px;

@@ -1,5 +1,6 @@
 import Veact from '../../lib/veact'
 
+import Icon from '../Icon'
 import Input from '../Input'
 import './index.scss'
 
@@ -32,6 +33,11 @@ export default ({ app }) => {
         value={app.model.searchInput}
         onInput={inputHandler(app)}
       />
+
+      <div className="App-search-view">
+        <Icon size="18" className="App-search-view-button" type="th" />
+        <Icon size="18" className="App-search-view-button" type="th-list" />
+      </div>
     </div>
   )
 }
