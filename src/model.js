@@ -20,8 +20,11 @@ export default {
   browserIndex: [
     { id: 1, name: 'Firefox' },
     { id: 2, name: 'Safari' },
-    { id: 3, name: 'Ubuntu' },
-    { id: 4, name: 'Chrome' },
+    { id: 3, name: 'Opera' },
+    { id: 4, name: 'Ubuntu' },
+    { id: 5, name: 'Chrome' },
+    { id: 6, name: 'IE' },
+    { id: 7, name: 'Edge' },
   ],
   sessions: [{
     id: 0,

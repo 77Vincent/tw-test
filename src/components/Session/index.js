@@ -15,8 +15,26 @@ const osIndex = {
 const iconColor = '#777'
 
 const addResource = (app, session) => () => {
-  const resource = session.addingResource.split(',')
-  console.log(resource)
+  const result = []
+  for (let input of session.addingResource.split(',')) {
+    for (let item of app.model.browserIndex) {
+      if (input.trim() === item.name.toLowerCase()) {
+        result.push(item.id)
+      }
+    }
+  }
+  console.log(result)
+  session.browsers.push(...result)
+  app.dispatch(model => {
+    const newSessions = model.sessions.map(v => {
+      if (v.id === session.id) {
+        return session
+      } else {
+        return v
+      }
+    })
+    return { sessions: newSessions }
+  })
   closePopup(app)()
 }
 
@@ -69,13 +87,13 @@ export default ({ session, app }) => {
         <Icon onClick={closePopup(app)} type="cancel" color="#00b4cf" size="18" className="App-session-popup-cancel"/>
         <div>Separate multiple resource name with commas.</div>
         <Input
+          autofocus
           className="App-session-popup-input"
           value={session.addingResource}
-          onChange={(e) => {
+          onInput={(e) => {
             app.dispatch(model => {
               const newSessions = model.sessions.map(v => {
                 if (v.id === session.id) {
-                  v.isEditing = false
                   v.addingResource = e.target.value
                   return v
                 } else {
