@@ -1,12 +1,29 @@
 import Veact from '../../lib/veact'
 
+import Icon from '../Icon'
 import './index.scss'
+
+const typeIndex = {
+  building: 'cog-1',
+  idle: 'coffee',
+}
 
 export default ({ app }) => {
   const { model } = app
 
   const Info = ({ item, className }) => (
     <div className={className}>
+      {
+        item.title === 'building' || item.title === 'idle' ?
+          <div className="App-status-icon-wrap">
+            <Icon
+              className={`App-status-icon-${item.title}`}
+              color="#fff"
+              size="128"
+              type={typeIndex[item.title]} />
+          </div>
+          : null
+      }
       <div className="App-status-item-title">{item.title}</div>
       <div className="App-status-item-count">{item.count}</div>
     </div>

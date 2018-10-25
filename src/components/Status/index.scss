@@ -1,10 +1,40 @@
 @import '../../base/var.scss';
 
-.App-status {
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
+$height-status-block: 120px;
+
+.App-status {
   .App-status-item {
-    height: 120px;
+    height: $height-status-block;
     padding: 20px 30px;
+    position: relative;
+  }
+
+  .App-status-icon-wrap {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    opacity: 0.2;
+    line-height: $height-status-block;
+    position: absolute;
+  }
+
+  .App-status-icon-building {
+    animation: spin 2s linear infinite;
+    -ms-animation: spin 2s linear infinite;
+    -moz-animation: spin 2s linear infinite;
+    -webkit-animation: spin 2s linear infinite;
   }
 
   .App-status-building,
