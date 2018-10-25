@@ -1,4 +1,6 @@
-import { diff } from './diff'
+import diffDOM from './diff-dom'
+
+const dd = new diffDOM()
 
 const _ = {
   is: type => input => Object.prototype.toString.call(type) === Object.prototype.toString.call(input),
@@ -94,11 +96,8 @@ class Veact {
   }
 
   _update() {
-    const newVDOM = this.App({ app: this })
-
-    this.vDOM = newVDOM
-    this.rootDOM.removeChild(this.rootDOM.children[0])
-    this.rootDOM.appendChild(this._render(this.vDOM))
+    const diff = dd.diff(this.rootDOM.children[0], this._render(this.App({ app: this })))
+    dd.apply(this.rootDOM.children[0], diff)
   }
 
   dispatch = (callback) => {
