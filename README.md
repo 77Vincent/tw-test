@@ -5,6 +5,11 @@ According to the test requirement, no runtime third-part library or framework is
 
 Due to time limit and initial focus of building the UI library, some parts are missing from the current version which includes unit test and full-range responsiveness.
 
+## Features
+- JSX
+- ES6
+- SASS
+
 ## Pre-run
 ```bash
 npm install
