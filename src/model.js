@@ -2,6 +2,7 @@ export default {
   searchIsFocus: false,
   searchInput: '',
   isUserPopup: false,
+  isSessionsViewList: true,
   user: {
     avatar: 'https://www.w3schools.com/howto/img_avatar2.png',
   },

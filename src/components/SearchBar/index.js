@@ -4,6 +4,10 @@ import Icon from '../Icon'
 import Input from '../Input'
 import './index.scss'
 
+const toggleView = app => () => {
+  app.dispatch(model => ({ isSessionsViewList: !model.isSessionsViewList }))
+}
+
 const switchSearchType = (app, key) => () => {
   app.dispatch(() => ({ currentSearchType: key }))
 }
@@ -35,8 +39,20 @@ export default ({ app }) => {
       />
 
       <div className="App-search-view">
-        <Icon size="18" className="App-search-view-button" type="th" />
-        <Icon size="18" className="App-search-view-button" type="th-list" />
+        <Icon
+          color={app.model.isSessionsViewList ? '#00b4cf' : null}
+          size="18"
+          className="App-search-view-button"
+          type="th"
+          onClick={toggleView(app)}
+        />
+        <Icon
+          color={!app.model.isSessionsViewList ? '#00b4fc' : null}
+          size="18"
+          className="App-search-view-button"
+          type="th-list"
+          onClick={toggleView(app)}
+        />
       </div>
     </div>
   )
