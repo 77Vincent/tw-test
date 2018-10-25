@@ -1,7 +1,11 @@
 @import '../../base/var.scss';
 
+$size-avatar: 40px;
+$height-header: 60px;
+$height-button: 40px;
+
 .App-header {
-  height: 60px;
+  height: $height-header;
   box-shadow: $box-shadow;
   text-align: center;
   line-height: 60px;
@@ -12,5 +16,48 @@
   .App-header-logo {
     width: 90px;
     vertical-align: middle;
+  }
+
+  .App-header-user-wrap {
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    line-height: $height-header;
+    top: 0;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .App-header-user {
+    width: $size-avatar;
+    height: $size-avatar;
+    background-size: cover;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .App-header-popup {
+    box-shadow: $box-shadow;
+    top: 101%;
+    right: 0;
+    position: absolute;
+    width: 150px;
+    background-color: #fff;
+    text-align: left;
+    padding: 10px 0;
+
+    .App-header-popup-button {
+      padding: 0 15px;
+      height: $height-button;
+      line-height: $height-button;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $color-off-white;
+      }
+    }
   }
 }

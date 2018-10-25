@@ -1,6 +1,10 @@
 export default {
   searchIsFocus: false,
   searchInput: '',
+  isUserPopup: false,
+  user: {
+    avatar: 'https://www.w3schools.com/howto/img_avatar2.png',
+  },
   navigationItems: [
     { id: 'dashboard', label: 'dashboard' },
     { id: 'agent', label: 'agent' },

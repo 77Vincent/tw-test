@@ -11,7 +11,7 @@ const App = ({ app }) => {
     <div className="App-root" >
       <Header />
 
-      <div className="container">
+      <div className="App-container">
         <Nav />
 
         <div className="App-content">
